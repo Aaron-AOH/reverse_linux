@@ -7,8 +7,9 @@ def clearScr():
 
 numero = int(input("""
 Escoja la opcion que desea 
-1: reverse shell en Python {.py}
-2: reverse shell en Bash {.sh}
+1: reverse shell Python {.py} /simple/
+2: reverse shell Bash {.sh} /command interface/ \033 [0;32m{Recommended} \033 [0m
+3: reverse shell Python {.py} /command interface/ \033 [0;32m{Recommended} \033 [0m
 >  """))
 
 if numero == 1: 
