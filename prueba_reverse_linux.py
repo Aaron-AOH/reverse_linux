@@ -168,10 +168,10 @@ if numero == 3:
       x = x.replace("ip", ""+ ip +"")
       x = x.replace("puerto", ""+ puerto +"")
       f.write(x)
-    os.system('mv '+ name_malware +' malware_victima')
+    os.system('mv '+ name_malware +'.py '+ path_malware +'')
 
-    print("El malware se encuentra en la carpeta {malware}")
-    path_malwaree = os.getcwd()+ "/malware_victima/""+ name_malware +"
+    print("El malware se encuentra en la carpeta {malware_victima}")
+    path_malwaree = os.getcwd()+ "/malware_victima
     print( path_malwaree)  
   
     option_listen = input("""
