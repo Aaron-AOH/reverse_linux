@@ -1,4 +1,4 @@
-IntroducciÃ³n:
+IntroducciÃ³n
 
 Esta herramienta escrita en python y bash tiene la funciÃ³n de crear un archivo malicioso que nos brindarÃ¡ una reverse shell sobre un dispositivo linux.
 La creaciÃ³n de archivos maliciosos es una interfaz muy sencilla de entender, solo tendrÃ­a que introducir el numero escogido.
@@ -7,7 +7,7 @@ Dos de los tres posibles archivos maliciosos tienen incorporado una herramienta 
 
 
 
-InstalaciÃ³n:
+InstalaciÃ³n: 
 
 git clone https://github.com/Xenon/evil-linux.git
 cd evil-linux
@@ -16,7 +16,7 @@ sudo python3 requirements.py
 
 
 
-EjecuciÃ³n:
+EjecuciÃ³sn:**
 
 Una vez hemos realizado correctamente los pasos de la instalaciÃ³n pasaremos a ejecutar la herramienta.
 Con el comando python3 evil-linux.py iniciaremos la herramienta que se verÃ¡ asÃ­:
@@ -33,6 +33,7 @@ Para poder utilizar esta interfaz/menÃº tendremos que poner el siguiente coman
 
 
 Video Demostrativo
+
 video youtube
 
 
