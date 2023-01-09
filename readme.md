@@ -44,13 +44,11 @@ Ejemplo:
 *La opcion 2:* Un ejecutable bash que creara un reverse shell, a la vez que descargara una interfaz de comandos automatizados para la post explotacion.
 Para poder utilizar esta interfaz/menu tendremos que poner el siguiente comando. **al conseguir la conexion:** 
 `bash .autoshell.sh` 
-
 automaticamente estaremos en un menu con diferentes funcionalidades y solo tendremos que indicar el numero de la funcion que queremos.
 
 *La opcion 3:* Un ejecutable python que creara un reverse shell, a la vez que descargara una interfaz de comandos automatizados para la post explotacion.
 Para poder utilizar esta interfaz/menu tendremos que poner el siguiente comando **al conseguir la conexion:** 
 `bash .autoshell.sh` 
-
 automaticamente estaremos en un menu con diferentes funcionalidades y solo tendremos que indicar el numero de la funcion que queremos.
 
 ***Interfaz/menu Automatizado "autoshell.sh"***
