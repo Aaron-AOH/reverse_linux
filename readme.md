@@ -4,7 +4,7 @@
 
 Esta herramienta escrita en python y bash tiene la funcion de crear un archivo malicioso que nos brindara una reverse shell sobre un dispositivo linux.
 La creacion de archivos maliciosos es una interfaz muy sencilla de entender, solo tendria que introducir el numero escogido.
-Una vez creado el archivo malicioso puede abrir un listener automaticamente poniendo "y" cuando pregunte por el listener, sino debera¡ abrir un listener manualmente en ecucha del puerto que se ha configurado para el archivo malicioso.
+Una vez creado el archivo malicioso puede abrir un listener automaticamente poniendo "y" cuando pregunte por el listener, sino debera abrir un listener manualmente en ecucha del puerto que se ha configurado para el archivo malicioso.
 Dos de los tres posibles archivos maliciosos tienen incorporado una herramienta de automatizacion de comandos graficamente para la post explotacion.
 
 
