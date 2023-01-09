@@ -24,7 +24,7 @@ Dos de los tres posibles archivos maliciosos tienen incorporado una herramienta 
 ***Ejecucion:***
 
 Una vez hemos realizado correctamente los pasos de la instalacion pasaremos a ejecutar la herramienta.
-Con el comando p
+Con el comando:
 
 `python3 evil-linux.py` 
 
@@ -39,13 +39,13 @@ Ejemplo:
 
 `ls /root` #Para listar los contenidos que hay dentro de root, al mostrar las subcarpetas o archivos podremos seguir navegando
 
-´cat /root/prueba.txt´#Se mostrara el contenido del archivo txt.
+`cat /root/prueba.txt`#Se mostrara el contenido del archivo txt.
 
 La opcion 2: Un ejecutable bash que creara un reverse shell, a la vez que descargara una interfaz de comandos automatizados para la post explotacion.
 Para poder utilizar esta interfaz/menu tendremos que poner el siguiente comando. 
 **conseguir la conexion:** 
 
-`bash .autoshell.sh´ 
+`bash .autoshell.sh` 
 
 automaticamente estaremos en un menu con diferentes funcionalidades y solo tendremos que indicar el numero de la funcion que queremos.
 
