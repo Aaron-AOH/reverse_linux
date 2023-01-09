@@ -34,20 +34,20 @@ La herramienta que se vera asi :
 FOTO DE LA HERAMIENTA MENU
 Podremos escoger si nuestro malware es un archivo .py [python] o .sh [bash]. 
 
-la opcion 1: Un ejecutable python que creara una reverse shell simple, donde tendremos dificultades para movernos entre los directorios, tendriamos que listar el contenido de los directorios para ver lo que hay dentro, no podriamos movernos de la ruta en la que nos encontremos. Pero si podemos ver, modificar o eliminar lo que hay dentro de cada directorio, sabiendo la ruta completa del elemento.
+*la opcion 1:* Un ejecutable python que creara una reverse shell simple, donde tendremos dificultades para movernos entre los directorios, tendriamos que listar el contenido de los directorios para ver lo que hay dentro, no podriamos movernos de la ruta en la que nos encontremos. Pero si podemos ver, modificar o eliminar lo que hay dentro de cada directorio, sabiendo la ruta completa del elemento.
 Ejemplo: 
 
 `ls /root` #Para listar los contenidos que hay dentro de root, al mostrar las subcarpetas o archivos podremos seguir navegando
 
 `cat /root/prueba.txt`#Se mostrara el contenido del archivo txt.
 
-La opcion 2: Un ejecutable bash que creara un reverse shell, a la vez que descargara una interfaz de comandos automatizados para la post explotacion.
+*La opcion 2:* Un ejecutable bash que creara un reverse shell, a la vez que descargara una interfaz de comandos automatizados para la post explotacion.
 Para poder utilizar esta interfaz/menu tendremos que poner el siguiente comando. **al conseguir la conexion:** 
 `bash .autoshell.sh` 
 
 automaticamente estaremos en un menu con diferentes funcionalidades y solo tendremos que indicar el numero de la funcion que queremos.
 
-La opcion 3: Un ejecutable python que creara un reverse shell, a la vez que descargara una interfaz de comandos automatizados para la post explotacion.
+*La opcion 3:* Un ejecutable python que creara un reverse shell, a la vez que descargara una interfaz de comandos automatizados para la post explotacion.
 Para poder utilizar esta interfaz/menu tendremos que poner el siguiente comando **al conseguir la conexion:** 
 `bash .autoshell.sh` 
 
